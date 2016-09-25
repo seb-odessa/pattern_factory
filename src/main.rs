@@ -91,6 +91,7 @@ mod method {
     pub trait Factory {
         fn create(&self, what : Type) -> Box<Pizza>;
     }
+
     pub fn order_pizza(factory : &Factory, pizza : Type) -> Box<Pizza> {
         let pizza = factory.create(pizza);
         pizza.prepare();
